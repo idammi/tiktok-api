@@ -1,4 +1,4 @@
-<img src="https://github.com/idammi/tiktok-rest-api/blob/main/assets/tiktok.png" width=75 align=left> <h1>TikTok API Service</h1>
+<img src="https://github.com/idammi/tiktok-api/blob/main/assets/tiktok.png" width=75 align=left> <h1>TikTok API Service</h1>
 API Wrapper for TikTok private API access
 <br>
 
