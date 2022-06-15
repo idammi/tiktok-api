@@ -31,6 +31,31 @@ $tiktok->setProxy($proxy);
 - `getUserInfo` - Get user info `getUserInfo($secUserId)`
 - `search` - Search for user `search($keyword)`
 
+## Example Login Response
+```json
+{
+    "data": {
+        "app_id": 1233,
+        "avatar_url": "",
+        "connects": [],
+        "country_code": 234,
+        "device_id": 0,
+        "email": "",
+        "has_password": 1,
+        "is_kids_mode": 0,
+        "mobile": "+234****3724",
+        "name": "user5180781450262",
+        "screen_name": "user5180781450262",
+        "sec_user_id": "MS4wLjABAAAAdsnqxZXSEeRzp4ppOc8Zndo14IaYeNxiABwTPfbGkxYCWr4OCzQF90JgJPC33jD6",
+        "session_key": "7f6f103535941dc2054baa0446a5cf3a",
+        "user_id": 7058506727294240000,
+        "user_id_str": "7058506727294239749",
+        "user_verified": false
+    },
+    "message": "success"
+}
+```
+
 
 ## TikTok Private API service subscription pricing
 
