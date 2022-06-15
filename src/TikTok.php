@@ -111,8 +111,8 @@ class TikTok
         $this->setUser($username);
 
         return $this->request('account/login/')
-                    ->addPost('username', Signatures::xorEncrypt($username))
-                    ->addPost('password', Signatures::xorEncrypt($password))
+                    ->addPost('username', $username)
+                    ->addPost('password', $password)
                     ->getResponse();
     }
 
