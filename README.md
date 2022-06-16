@@ -38,7 +38,7 @@ $tiktok->setProxy($proxy);
 - `getChallenge` - Get challenge feed `getChallenge($ch_id, $cursor)`
 - `getMusic` - Get Music feed `getMusic($music_id, $cursor)`
 - `getUserInfo` - Get user info `getUserInfo($secUserId)`
-- `search` - Search for user `search($keyword)`
+- `search` - General search `search($keyword)`
 
 ## Example Login Response
 ```json
