@@ -25,9 +25,18 @@ $tiktok->setProxy($proxy);
 - `login` - Login user/resume logged in session `login($username, $password)`
 - `like` - Like a post `like($awemeId)`
 - `unlike` - Unlike a post `unlike($awemeId)`
+- `stats` - View a post `stats($awemeId)`
 - `comment` - Comment on a post `comment($awemeId, $commentText)`
+- `getComments` - Get comments on a post `getComments($awemeId, $cursor)`
+- `likeComment` - Like a comment `likeComment($cid, $awemeId)`
+- `unlikeComment` - Unlike a comment `unlikeComment($cid, $awemeId)`
 - `follow` - Follow a user `follow($secUserId)`
 - `unfollow` - Unfollow a user `unfollow($secUserId)`
+- `getUserFeed` - Get user posts `getUserFeed($secUserId, $cursor)`
+- `getUserFollowers` - Get user followers `getUserFollowers($secUserId, $max_time)`
+- `getUserFollowing` - Get user following `getUserFollowing($secUserId, $max_time)`
+- `getChallenge` - Get challenge feed `getChallenge($ch_id, $cursor)`
+- `getMusic` - Get Music feed `getMusic($music_id, $cursor)`
 - `getUserInfo` - Get user info `getUserInfo($secUserId)`
 - `search` - Search for user `search($keyword)`
 

@@ -147,6 +147,21 @@ class TikTok
     }
 
     /**
+     * View a video.
+     * 
+     * @param awemeId The ID of the video you want to like.
+     * 
+     * @return The response from the server.
+     */
+    public function stats(
+        $awemeId)
+    {
+        return $this->request('media/stats/')
+                    ->addParam('aweme_id', $awemeId)
+                    ->getResponse();
+    }
+
+    /**
      * Comment on a video.
      * 
      * @param awemeId The ID of the video you want to comment on.
@@ -161,6 +176,60 @@ class TikTok
         return $this->request('media/comment/')
                     ->addPost('aweme_id', $awemeId)
                     ->addPost('text', $text)
+                    ->getResponse();
+    }
+
+   /**
+    * It returns the comments of a video.
+    * 
+    * @param awemeId The ID of the video you want to get comments from.
+    * @param cursor The cursor is a string that is used to paginate through the comments.
+    * 
+    * @return The response from the server.
+    */
+    public function getComments(
+        $awemeId,
+        $cursor = 0)
+    {
+        return $this->request('media/getComments/')
+                    ->addPost('aweme_id', $awemeId)
+                    ->addPost('cursor', $cursor)
+                    ->getResponse();
+    }
+
+    /**
+     * Like a comment.
+     * 
+     * @param cid The ID of the comment you want to like.
+     * @param awemeId The ID of the video.
+     * 
+     * @return The response from the server.
+     */
+    public function likeComment(
+        $cid,
+        $awemeId)
+    {
+        return $this->request('media/likeComment/')
+                    ->addParam('cid', $awemeId)
+                    ->addParam('aweme_id', $awemeId)
+                    ->getResponse();
+    }
+
+    /**
+     * Unlike a comment.
+     * 
+     * @param cid The ID of the comment you want to unlike.
+     * @param awemeId The ID of the video.
+     * 
+     * @return The response from the server.
+     */
+    public function unlikeComment(
+        $cid,
+        $awemeId)
+    {
+        return $this->request('media/unlikeComment/')
+                    ->addParam('cid', $awemeId)
+                    ->addParam('aweme_id', $awemeId)
                     ->getResponse();
     }
 
@@ -206,6 +275,100 @@ class TikTok
                     ->getResponse();
     }
 
+   /**
+    * This function gets the user feed for a given user id and cursor.
+    * 
+    * @param sec_user_id The user's ID.
+    * @param cursor The cursor is a value that is used to paginate through the results. The first time
+    * you make a request, you will not have a cursor, so you will pass 0. The response will contain a
+    * new cursor value, which you will use in your next request.
+    * 
+    * @return An array of objects.
+    */
+    public function getUserFeed(
+        $sec_user_id,
+        $cursor = 0)
+    {
+        return $this->request('user/feed/')
+                    ->addParam('sec_user_id', $sec_user_id)
+                    ->addParam('max_cursor', $cursor)
+                    ->getResponse();
+    }
+
+    /**
+     * This function gets the followers for a given user id.
+     * 
+     * @param sec_user_id The user's ID.
+     * @param max_time The cursor is a value that is used to paginate through the results.
+     * 
+     * @return An array of objects.
+     */
+     public function getUserFollowers(
+         $sec_user_id,
+         $max_time = 0)
+     {
+         return $this->request('user/followers/')
+                     ->addParam('sec_user_id', $sec_user_id)
+                     ->addParam('max_time', $max_time)
+                     ->getResponse();
+     }
+
+    /**
+     * This function gets the following for a given user id.
+     * 
+     * @param sec_user_id The user's ID.
+     * @param cursor The cursor is a value that is used to paginate through the results.
+     * 
+     * @return An array of objects.
+     */
+     public function getUserFollowing(
+         $sec_user_id,
+         $max_time = 0)
+     {
+         return $this->request('user/following/')
+                     ->addParam('sec_user_id', $sec_user_id)
+                     ->addParam('max_time', $max_time)
+                     ->getResponse();
+     }
+
+    /**
+    * This function returns the feed for a given challenge ID.
+    * 
+    * @param ch_id The challenge ID
+    * @param cursor The cursor value is a string that is used to keep track of where you are in the
+    * pagination.
+    * 
+    * @return An array of data.
+    */
+    public function getChallenge(
+        $ch_id,
+        $cursor = 0)
+    {
+        return $this->request('media/getChallenge/')
+                    ->addParam('ch_id', $ch_id)
+                    ->addParam('cursor', $cursor)
+                    ->getResponse();
+    }
+
+    /**
+    * This function returns the feed for a given music ID.
+    * 
+    * @param music_id The music ID
+    * @param cursor The cursor value is a string that is used to keep track of where you are in the
+    * pagination.
+    * 
+    * @return An array of data.
+    */
+    public function getMusic(
+        $music_id,
+        $cursor = 0)
+    {
+        return $this->request('media/getMusic/')
+                    ->addParam('music_id', $music_id)
+                    ->addParam('cursor', $cursor)
+                    ->getResponse();
+    }
+
     /**
      * This function returns the user information of the user with the given sec_user_id.
      * 
@@ -235,7 +398,7 @@ class TikTok
         $offset = 0,
         $count = 10)
     {
-        return $this->request('search/single/')
+        return $this->request('search/general/')
                     ->addPost('keyword', $query)
                     ->addPost('offset', $offset)
                     ->addPost('count', $count)
