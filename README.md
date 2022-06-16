@@ -7,6 +7,11 @@ API Wrapper for TikTok private API access
 Monthly subscription of my private API service is required for this to function.
 
 
+## API Access Key
+
+You can use ```Authorization: Bearer <Access key>``` in the request header or use ```?key=<Access key>``` in the request parameter. 
+
+
 ## Usage
 ```php
 
@@ -64,10 +69,6 @@ $tiktok->setProxy($proxy);
     "message": "success"
 }
 ```
-
-## API Access Key
-
-You can use ```Authorization: Bearer <Access key>``` in the header or use ```?key=<Access key>``` in the parameter of the API requests. 
 
 ## TikTok Private API service subscription pricing
 
