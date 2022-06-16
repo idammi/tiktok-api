@@ -65,6 +65,9 @@ $tiktok->setProxy($proxy);
 }
 ```
 
+## API Access Key
+
+You can use ```Authorization: Bearer <Access key>``` in the header or use ```?key=<Access key>``` in the parameter of the API requests. 
 
 ## TikTok Private API service subscription pricing
 
