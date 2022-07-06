@@ -110,7 +110,7 @@ class TikTok
     {
         $this->setUser($username);
 
-        return $this->request('account/login/')
+        return $this->request('account/login')
                     ->addPost('username', $username)
                     ->addPost('password', $password)
                     ->getResponse();
@@ -126,7 +126,7 @@ class TikTok
     public function like(
         $awemeId)
     {
-        return $this->request('media/like/')
+        return $this->request('media/like')
                     ->addParam('aweme_id', $awemeId)
                     ->getResponse();
     }
@@ -141,7 +141,7 @@ class TikTok
     public function unlike(
         $awemeId)
     {
-        return $this->request('media/unlike/')
+        return $this->request('media/unlike')
                     ->addParam('aweme_id', $awemeId)
                     ->getResponse();
     }
@@ -156,7 +156,7 @@ class TikTok
     public function stats(
         $awemeId)
     {
-        return $this->request('media/stats/')
+        return $this->request('media/stats')
                     ->addParam('aweme_id', $awemeId)
                     ->getResponse();
     }
@@ -173,7 +173,7 @@ class TikTok
         $awemeId,
         $text)
     {
-        return $this->request('media/comment/')
+        return $this->request('media/comment')
                     ->addPost('aweme_id', $awemeId)
                     ->addPost('text', $text)
                     ->getResponse();
@@ -191,7 +191,7 @@ class TikTok
         $awemeId,
         $cursor = 0)
     {
-        return $this->request('media/getComments/')
+        return $this->request('media/getComments')
                     ->addPost('aweme_id', $awemeId)
                     ->addPost('cursor', $cursor)
                     ->getResponse();
@@ -209,7 +209,7 @@ class TikTok
         $cid,
         $awemeId)
     {
-        return $this->request('media/likeComment/')
+        return $this->request('media/likeComment')
                     ->addParam('cid', $awemeId)
                     ->addParam('aweme_id', $awemeId)
                     ->getResponse();
@@ -227,7 +227,7 @@ class TikTok
         $cid,
         $awemeId)
     {
-        return $this->request('media/unlikeComment/')
+        return $this->request('media/unlikeComment')
                     ->addParam('cid', $awemeId)
                     ->addParam('aweme_id', $awemeId)
                     ->getResponse();
@@ -245,7 +245,7 @@ class TikTok
         $secUserId,
         $channelId = 3)
     {
-        return $this->request('user/follow/')
+        return $this->request('user/follow')
                     ->addParam('from', 0)
                     ->addParam('from_pre', -1)
                     ->addParam('type', 1)
@@ -266,7 +266,7 @@ class TikTok
         $secUserId,
         $channelId = 3)
     {
-        return $this->request('user/unfollow/')
+        return $this->request('user/unfollow')
                     ->addParam('from', 0)
                     ->addParam('from_pre', -1)
                     ->addParam('type', 1)
@@ -289,7 +289,7 @@ class TikTok
         $sec_user_id,
         $cursor = 0)
     {
-        return $this->request('user/feed/')
+        return $this->request('user/feed')
                     ->addParam('sec_user_id', $sec_user_id)
                     ->addParam('max_cursor', $cursor)
                     ->getResponse();
@@ -307,7 +307,7 @@ class TikTok
          $sec_user_id,
          $max_time = 0)
      {
-         return $this->request('user/followers/')
+         return $this->request('user/followers')
                      ->addParam('sec_user_id', $sec_user_id)
                      ->addParam('max_time', $max_time)
                      ->getResponse();
@@ -325,7 +325,7 @@ class TikTok
          $sec_user_id,
          $max_time = 0)
      {
-         return $this->request('user/following/')
+         return $this->request('user/following')
                      ->addParam('sec_user_id', $sec_user_id)
                      ->addParam('max_time', $max_time)
                      ->getResponse();
@@ -344,7 +344,7 @@ class TikTok
         $ch_id,
         $cursor = 0)
     {
-        return $this->request('media/getChallenge/')
+        return $this->request('media/getChallenge')
                     ->addParam('ch_id', $ch_id)
                     ->addParam('cursor', $cursor)
                     ->getResponse();
@@ -363,7 +363,7 @@ class TikTok
         $music_id,
         $cursor = 0)
     {
-        return $this->request('media/getMusic/')
+        return $this->request('media/getMusic')
                     ->addParam('music_id', $music_id)
                     ->addParam('cursor', $cursor)
                     ->getResponse();
@@ -379,7 +379,7 @@ class TikTok
     public function getUserInfoById(
         $secUserId)
     {
-        return $this->request('user/info/')
+        return $this->request('user/info')
                     ->addParam('sec_user_id', $secUserId)
                     ->getResponse();
     }
@@ -398,7 +398,7 @@ class TikTok
         $offset = 0,
         $count = 10)
     {
-        return $this->request('search/general/')
+        return $this->request('search/general')
                     ->addPost('keyword', $query)
                     ->addPost('offset', $offset)
                     ->addPost('count', $count)
