@@ -96,6 +96,10 @@ class TikTok
     /**
      * Login.
      * 
+     * NOTE!!
+     * If this is the first time you're sending login request, the API will attempt to perform a
+     * proper device registration for that account. 
+     * 
      * It takes a username and password, sets the username, and then sends a request to the server with
      * the username and password encrypted.
      * 
