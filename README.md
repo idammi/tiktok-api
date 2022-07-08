@@ -9,7 +9,7 @@ Monthly subscription of my private API service is required for this to function.
 
 ## API Access Key
 
-You can add ```Authorization: Bearer <Access key>``` in the request header or add ```?key=<Access key>``` in the request parameters. 
+You can use ```Authorization: Bearer <Access key>``` in the request header or use ```?key=<Access key>``` in the request parameter. 
 
 
 ## Usage
