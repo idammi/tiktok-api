@@ -110,7 +110,7 @@ class TikTok
     {
         $this->setUser($username);
 
-        return $this->request('account/login')
+        return $this->request('auth/login')
                     ->addPost('username', $username)
                     ->addPost('password', $password)
                     ->getResponse();
