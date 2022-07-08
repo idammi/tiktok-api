@@ -73,7 +73,7 @@ $tiktok->setProxy($proxy);
 ## TikTok Private API service subscription pricing
 
 | Package | Cost(per month) | Account | Quota(requests per day) | Quota (requests per month) |
-| ------- | :---------------: | --------------: | -----------------: |
+| ------- | :---------------: | -------: | --------------: | -----------------: |
 | **Pro** *(popular)* | 50 USD | 5 | 5,000 | ~150,000 |
 | **Business** | 100 USD | 15 | 12,000 | ~360,000 |
 | **Custom** | custom pricing | ? | ? | ? |
