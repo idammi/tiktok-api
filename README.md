@@ -74,9 +74,9 @@ $tiktok->setProxy($proxy);
 
 | Package | Cost(per month) | Account Limit | Quota (requests/day) | Quota (requests/month) |
 | ------- | :---------------: | ----------: | --------------: | -----------------: |
-| **Starter** | 50 USD | 5 | 5,000 | ~150,000 |
-| **Pro** *(popular)* | 100 USD | 10 | 12,000 | ~360,000 |
-| **Business** | 200 USD | 20 | 25,000 | ~720,000 |
+| **Starter** | 50 USD | 1 | 5,000 | ~150,000 |
+| **Pro** *(popular)* | 100 USD | 5 | 12,000 | ~360,000 |
+| **Business** | 200 USD | 10 | 25,000 | ~720,000 |
 | **Custom** | custom pricing | ? | ? | ? |
 
 - These quota counts doesn't include Account Login requests unless it's a new login which requires device registration.
