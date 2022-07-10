@@ -3,15 +3,6 @@ API Wrapper for TikTok private API access
 <br>
 
 
-## How does this work?
-Monthly subscription of my private API service is required for this to function.
-
-
-## API Access Key
-
-You can use ```Authorization: Bearer <Access key>``` in the request header or use ```?key=<Access key>``` in the request parameter. 
-
-
 ## Usage
 ```php
 
@@ -70,7 +61,11 @@ $tiktok->setProxy($proxy);
 }
 ```
 
-## TikTok Private API service subscription pricing
+## How does this work?
+Monthly subscription of my private API service is required for this to function.
+
+
+## Subscription service pricing
 
 | Package | Cost(per month) | Account Limit | Quota (requests/day) | Quota (requests/month) |
 | ------- | :---------------: | ----------: | --------------: | -----------------: |
@@ -79,7 +74,12 @@ $tiktok->setProxy($proxy);
 | **Business** | 200 USD | 10 | 25,000 | ~720,000 |
 | **Custom** | custom pricing | ? | ? | ? |
 
-- These quota counts doesn't include Account Login requests unless it's a new login which requires device registration.
+- These quota counts successful responses (with status code 200).
+
+
+## API Access Key
+
+You can use ```Authorization: Bearer <access_key>``` in the request header or use ```?key=<access_key>``` in the request parameter. 
 
 
 ## Private API backend functionalities
