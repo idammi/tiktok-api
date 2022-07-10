@@ -1,0 +1,56 @@
+{
+    "name": "idammi/tiktok-api",
+    "description": "TikTok API wrapper for PHP",
+    "homepage": "https://github.com/idammi/tiktok-api",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "sergeykomlev/lazyjsonmapper": "^2.0.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-gd": "*",
+        "ext-exif": "*",
+        "ext-zlib": "*",
+        "ext-bcmath": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iDammi",
+            "email": "dami@socialgenius.net",
+            "homepage": "https://SocialGenius.net",
+            "role": "Developer"
+        }
+    ],
+    "suggest": {
+        "ext-curl": "Required for CURL handler support in requests"
+    },
+    "autoload": {
+        "psr-4": {
+            "TikTokAPI\\": "src/"
+        }
+    },
+    "keywords": [
+        "php",
+        "php7",
+        "rest-api",
+        "php-library",
+        "php-fpm", 
+        "scrapper", 
+        "php8",
+        "tiktok",
+        "tiktok-scraper",
+        "tiktok-api",
+        "tiktokapi",
+        "tiktok-automation",
+        "tiktok-downloader", 
+        "tiktok-signature", 
+        "ttencrypt", 
+        "nowatermark", 
+        "xgorgon",
+        "xkhonos",
+        "xtyhon",
+        "xladon"
+    ]
+}
