@@ -1,7 +1,10 @@
 <img src="https://github.com/idammi/tiktok-api/blob/main/assets/tiktok.png" width=75 align=left> <h1>TikTok Private API</h1>
-API Wrapper for TikTok private API access
+This library gives access to exclusive TikTok API functions: login, like, follow, comment, getting user (profile, followers, following, videos), upload, getting videos from hashtag, searching for sounds, search for users.
 <br>
 
+
+# Installation via Composer
+`composer require idammi/tiktok-api`
 
 ## Usage
 ```php
@@ -57,7 +60,9 @@ $tiktok->setProxy($proxy);
         "user_id_str": "7058506727294239749",
         "user_verified": false
     },
-    "message": "success"
+    "message": "success",
+    "status": "ok",
+    "timestamp": 1657486200
 }
 ```
 
@@ -93,7 +98,7 @@ Monthly subscription of my private API service is required for this to function.
 | **Business** | 200 USD | 10 | 25,000 | ~720,000 |
 | **Custom** | custom pricing | ? | ? | ? |
 
-- These quota counts successful responses (with status code 200).
+- These quota counts on successful responses (with status code 200).
 
 
 ## Terms and conditions
