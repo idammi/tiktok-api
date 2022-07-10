@@ -61,23 +61,7 @@ $tiktok->setProxy($proxy);
 }
 ```
 
-## How does this work?
-Monthly subscription of my private API service is required for this to function.
-
-
-## Subscription service pricing
-
-| Package | Cost(per month) | Account Limit | Quota (requests/day) | Quota (requests/month) |
-| ------- | :---------------: | ----------: | --------------: | -----------------: |
-| **Starter** | 50 USD | 1 | 5,000 | ~150,000 |
-| **Pro** *(popular)* | 100 USD | 5 | 12,000 | ~360,000 |
-| **Business** | 200 USD | 10 | 25,000 | ~720,000 |
-| **Custom** | custom pricing | ? | ? | ? |
-
-- These quota counts successful responses (with status code 200).
-
-
-## API Access Key
+## API Access Key Usage
 
 You can use ```Authorization: Bearer <access_key>``` in the request header or use ```?key=<access_key>``` in the request parameter. 
 
@@ -94,6 +78,22 @@ You can use ```Authorization: Bearer <access_key>``` in the request header or us
     - Complete device registration when logging in for the first time.
     - Account Login with username/password.
     - Automated captcha solver.
+
+
+## How does this work?
+Monthly subscription of my private API service is required for this to function.
+
+
+## Subscription service pricing
+
+| Package | Cost(per month) | Account Limit | Quota (requests/day) | Quota (requests/month) |
+| ------- | :---------------: | ----------: | --------------: | -----------------: |
+| **Starter** | 50 USD | 1 | 5,000 | ~150,000 |
+| **Pro** *(popular)* | 100 USD | 5 | 12,000 | ~360,000 |
+| **Business** | 200 USD | 10 | 25,000 | ~720,000 |
+| **Custom** | custom pricing | ? | ? | ? |
+
+- These quota counts successful responses (with status code 200).
 
 
 ## Terms and conditions
