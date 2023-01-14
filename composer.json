@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TikTokAPI\\": "src/"
+            "TikTokPHP\\": "src/"
         }
     },
     "keywords": [
